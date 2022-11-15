@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block main %}
+<p>
+    Need to limit access through user authentication
+</p>
+
+
+<form action ="post">
+    {{ form.csrf_token }}
+    {{ form.title.label}}
+    <br>
+    {{ form.title }}
+    {{ form.submit }}
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+<p> Blurb about submitting maintenance issues here</p>
+<p>Typically form setting, placeholder form in place</p>
+<p>Must create functionality for User Login / Authentication </p>
+<form action ="post">
+    {{ form.csrf_token }}
+    {{ form.title.label}}
+    <br>
+    {{ form.title }}
+    {{ form.submit }}
+</form>
+
+{% if title %}
+    <h1>{{ title }}</h1>
+{% endif %}
+{% endblock %}
